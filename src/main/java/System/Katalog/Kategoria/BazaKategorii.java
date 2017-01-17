@@ -1,43 +1,46 @@
 package System.Katalog.Kategoria;
 
+import System.Katalog.Sprzet;
+import java.util.ArrayList;
+
 public class BazaKategorii {
 
-	private Kategoria[] kategorie;
+    static private ArrayList<Kategoria> kategorie = new ArrayList<Kategoria>();
 
-	/**
-	 * 
-	 * @param model
-	 */
-	public boolean dodaj(Kategoria model) {
-		// TODO - implement BazaKategorii.dodaj
-		throw new UnsupportedOperationException();
-	}
+    /**
+     *
+     * @param model
+     */
+    static public boolean dodaj(Kategoria model) {
+        // TODO - implement BazaKategorii.dodaj
+        throw new UnsupportedOperationException();
+    }
 
-	/**
-	 * 
-	 * @param model
-	 */
-	public boolean usun(Kategoria model) {
-		// TODO - implement BazaKategorii.usun
-		throw new UnsupportedOperationException();
-	}
+    /**
+     *
+     * @param model
+     */
+    static public boolean usun(Kategoria model) {
+        // TODO - implement BazaKategorii.usun
+        throw new UnsupportedOperationException();
+    }
 
-	/**
-	 * 
-	 * @param dane
-	 */
-	public Kategoria szukaj(String[] dane) {
-		// TODO - implement BazaKategorii.szukaj
-		throw new UnsupportedOperationException();
-	}
+    /**
+     *
+     * @param dane
+     */
+    static public Kategoria szukaj(String[] dane) {
+        // TODO - implement BazaKategorii.szukaj
+        throw new UnsupportedOperationException();
+    }
 
-	/**
-	 * 
-	 * @param model
-	 */
-	public boolean edytuj(Kategoria model) {
-		// TODO - implement BazaKategorii.edytuj
-		throw new UnsupportedOperationException();
-	}
+    /**
+     *
+     * @param model
+     */
+    static public boolean edytuj(Kategoria model) {
+        // TODO - implement BazaKategorii.edytuj
+        throw new UnsupportedOperationException();
+    }
 
 }

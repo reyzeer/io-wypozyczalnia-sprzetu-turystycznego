@@ -1,5 +1,7 @@
 package System;
 
+import System.Katalog.BazaSprzetu;
+import System.Katalog.Kategoria.Kategoria;
 import System.Katalog.Sprzet;
 
 public class TAplikacja {
@@ -14,16 +16,24 @@ public class TAplikacja {
         // TODO code application logic here
     }
 
-    public void dodanieNowegoSprzetu(String name, ) {
+    public void dodanieNowegoSprzetu(
+            String name,
+            int ilosc,
+            int dlugoscOkresu,
+            int cenaZaOkres, 
+            Kategoria katgoria,
+            int maksymalnyCzasWypozyczenia) {
         
-        Sprzet sprzet = new Sprzet;T 
+        Sprzet sprzet = new Sprzet(); 
        
         sprzet.setNazwa(name);
-        sprzet.setIlosc(0);
-        sprzet.setDlugoscOkresu(0);
-        sprzet.setCenaZaOkres(0);
-        sprzet.setKategoria(name);
-        sprzet.
+        sprzet.setIlosc(ilosc);
+        sprzet.setDlugoscOkresu(dlugoscOkresu);
+        sprzet.setCenaZaOkres(cenaZaOkres);
+        sprzet.setKategoria(katgoria);
+        sprzet.setMaksymalnyCzasWypozyczenia(maksymalnyCzasWypozyczenia);
+        
+        BazaSprzetu.dodaj(sprzet);
         
         // TODO - implement TAplikacja.dodanieNowegoSprzetu
         throw new UnsupportedOperationException();

@@ -54,9 +54,12 @@ public class TAplikacjaTest {
      */
     @Test
     public void testDodanieNowegoSprzetu() {
+        
         System.out.println("dodanieNowegoSprzetu");
         TAplikacja instance = new TAplikacja();
-        instance.dodanieNowegoSprzetu();
+        
+        instance.dodanieNowegoSprzetu("Narty", 5, 7*24*60*60, 20000, , 28*24*60*60);
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
