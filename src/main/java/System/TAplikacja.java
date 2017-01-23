@@ -3,6 +3,9 @@ package System;
 import System.Katalog.BazaSprzetu;
 import System.Katalog.Kategoria.Kategoria;
 import System.Katalog.Sprzet;
+import System.ObslugaKlienta.Klienci.Klient;
+import System.ObslugaKlienta.Wypozyczenia.BazaWypozyczen;
+import System.ObslugaKlienta.Wypozyczenia.Wypozyczenie;
 
 public class TAplikacja {
 
@@ -39,17 +42,46 @@ public class TAplikacja {
         throw new UnsupportedOperationException();
     }
 
-    public void dodanieNowegoWypozyczenia() {
+    public void dodanieNowegoWypozyczenia(
+            Klient klient,
+            Sprzet sprzet,
+            int dataRozpoczeciaWypozyczenia,
+            int dataZakonczeniaWypozyczenia,
+            boolean zakoczone) {
+        
+        Wypozyczenie wypozyczenie = new Wypozyczenie ();
+        
+        wypozyczenie.setKlient(klient);
+        wypozyczenie.setSprzet(sprzet);
+        wypozyczenie.setDataRozpoczeciaWypozyczenia(dataRozpoczeciaWypozyczenia);
+
+        BazaWypozyczen.dodaj(wypozyczenie);
+        
         // TODO - implement TAplikacja.dodanieNowegoWypozyczenia
         throw new UnsupportedOperationException();
     }
 
-    public void zamkniecieWypozyczenia() {
+    public void zamkniecieWypozyczenia(
+            int dataZakonczeniaWypozyczenia,
+            boolean zakoczone) {
+        
+        Wypozyczenie wypozyczenie = new Wypozyczenie ();
+        
+        wypozyczenie.setDataZakonczeniaWypozyczenia(dataZakonczeniaWypozyczenia);
+        wypozyczenie.setZakonczone(zakoczone);
+        
+        BazaWypozyczen.usun(wypozyczenie)
         // TODO - implement TAplikacja.zamkniecieWypozyczenia
         throw new UnsupportedOperationException();
     }
 
-    public void dodanieNowejKategorii() {
+    public void dodanieNowejKategorii(
+            String name) {
+        
+        Kategoria kategoria = new Kategoria ();
+        
+        kategoria.setNazwa();
+        
         // TODO - implement TAplikacja.dodanieNowejKategorii
         throw new UnsupportedOperationException();
     }
