@@ -11,8 +11,8 @@ public class BazaSprzetu {
      * @param model
      */
     static public boolean dodaj(Sprzet model) {
-            // TODO - implement BazaSprzetu.dodaj
-            throw new UnsupportedOperationException();
+        boolean result = sprzet.add(model);
+        return result;
     }
 
     /**

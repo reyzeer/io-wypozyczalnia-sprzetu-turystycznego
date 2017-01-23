@@ -5,6 +5,8 @@
  */
 package System;
 
+import System.Katalog.Kategoria.Kategoria;
+import System.Katalog.Sprzet;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -58,10 +60,13 @@ public class TAplikacjaTest {
         System.out.println("dodanieNowegoSprzetu");
         TAplikacja instance = new TAplikacja();
         
-        instance.dodanieNowegoSprzetu("Narty", 5, 7*24*60*60, 20000, , 28*24*60*60);
+        Kategoria kategoria = new Kategoria();
         
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.dodanieNowegoSprzetu("Narty", 5, 7*24*60*60, 20000, kategoria, 28*24*60*60);
+        
+        Sprzet sprzet = BazaSprzetu.szukaj("Narty");
+        
+        assertEquals(sprzet.getNazwa(), "Narty");
     }
 
     /**

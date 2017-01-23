@@ -38,34 +38,30 @@ public class TAplikacja {
         
         BazaSprzetu.dodaj(sprzet);
         
-        // TODO - implement TAplikacja.dodanieNowegoSprzetu
-        throw new UnsupportedOperationException();
     }
 
     public void dodanieNowegoWypozyczenia(
             Klient klient,
-            Sprzet sprzet,
+            Sprzet[] sprzet,
             int dataRozpoczeciaWypozyczenia,
             int dataZakonczeniaWypozyczenia,
             boolean zakoczone) {
         
-        Wypozyczenie wypozyczenie = new Wypozyczenie ();
+        Wypozyczenie wypozyczenie = new Wypozyczenie();
         
         wypozyczenie.setKlient(klient);
         wypozyczenie.setSprzet(sprzet);
         wypozyczenie.setDataRozpoczeciaWypozyczenia(dataRozpoczeciaWypozyczenia);
 
         BazaWypozyczen.dodaj(wypozyczenie);
-        
-        // TODO - implement TAplikacja.dodanieNowegoWypozyczenia
-        throw new UnsupportedOperationException();
+    
     }
 
     public void zamkniecieWypozyczenia(
             int dataZakonczeniaWypozyczenia,
             boolean zakoczone) {
         
-        Wypozyczenie wypozyczenie = new Wypozyczenie ();
+        Wypozyczenie wypozyczenie = new Wypozyczenie();
         
         wypozyczenie.setDataZakonczeniaWypozyczenia(dataZakonczeniaWypozyczenia);
         wypozyczenie.setZakonczone(zakoczone);
