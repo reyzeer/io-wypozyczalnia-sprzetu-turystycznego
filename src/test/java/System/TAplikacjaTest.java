@@ -131,7 +131,7 @@ public class TAplikacjaTest {
         modelDoWyszukania.setKlient(klient);
         modelDoWyszukania.setSprzet(listaSprzetu);
         modelDoWyszukania.setDataRozpoczeciaWypozyczenia(rozpoczecieZamowienia);
-        
+
         assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getKlient(), klient);
         assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getDataRozpoczeciaWypozyczenia(), rozpoczecieZamowienia);
         assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getSprzet(), listaSprzetu);
@@ -144,11 +144,35 @@ public class TAplikacjaTest {
     @Test
     public void testZamkniecieWypozyczenia() {
         System.out.println("zamkniecieWypozyczenia");
+        
         TAplikacja instance = new TAplikacja();
         
-        instance.zamkniecieWypozyczenia(System.currentTimeMillis());
+        Klient klient = new Klient();
+        
+        List<Sprzet> listaSprzetu = new ArrayList<Sprzet>();
+       
+        Sprzet modelDoWyszkiwania = new Sprzet();
+        modelDoWyszkiwania.setNazwa("Narty");
+        
+        Sprzet sprzetPierwszy = BazaSprzetu.szukaj(modelDoWyszkiwania);
+        
+        listaSprzetu.add(sprzetPierwszy);
+        
+        int rozpoczecieZamowienia = (int) System.currentTimeMillis();
+        
+        instance.dodanieNowegoWypozyczenia(klient, listaSprzetu, rozpoczecieZamowienia, 0, false);
+       
+        Wypozyczenie modelDoWyszukania = new Wypozyczenie();
+        modelDoWyszukania.setKlient(klient);
+        modelDoWyszukania.setSprzet(listaSprzetu);
+        modelDoWyszukania.setDataRozpoczeciaWypozyczenia(rozpoczecieZamowienia);
+        
+        Wypozyczenie wypozyczenie = BazaWypozyczen.szukaj(modelDoWyszukania);
+        
+        wypozyczenie.setZakonczone(true);
+        
+        assertEquals(wypozyczenie.isZakoczone(), true);
 
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -161,9 +185,9 @@ public class TAplikacjaTest {
         
         instance.dodanieNowejKategorii("Zimowe");
         Kategoria kategoria = BazaKategorii.szukaj("Zimowe");
+
         assertEquals(kategoria.getNazwa(), "Zimowe");
-        
-        fail("The test case is a prototype.");
+
     }
     
 }

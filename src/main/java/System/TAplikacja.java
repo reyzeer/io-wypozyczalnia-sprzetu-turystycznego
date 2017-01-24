@@ -63,6 +63,7 @@ public class TAplikacja {
         wypozyczenie.setZakonczone(true);
         
         BazaWypozyczen.usun(wypozyczenie);
+        
     }
 
     public void dodanieNowejKategorii(String name) {

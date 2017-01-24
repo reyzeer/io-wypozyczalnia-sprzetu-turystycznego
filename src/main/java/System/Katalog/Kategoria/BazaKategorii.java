@@ -29,7 +29,7 @@ public class BazaKategorii {
      *
      * @param dane
      */
-    static public Kategoria szukaj(String[] dane) {
+    static public Kategoria szukaj(Kategoria kategoria) {
         // TODO - implement BazaKategorii.szukaj
         throw new UnsupportedOperationException();
     }
