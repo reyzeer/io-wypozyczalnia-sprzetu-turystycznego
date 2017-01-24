@@ -87,10 +87,11 @@ public class TAplikacjaTest {
     public void testDodanieNowegoWypozyczenia() {
         
         System.out.println("dodanieNowegoWypozyczenia");
-
         TAplikacja instance = new TAplikacja();
+        
         Klient klient = new Klient();
         Sprzet sprzet = new Sprzet();
+         
         instance.dodanieNowegoWypozyczenia(klient, sprzet, System.currentTimeMillis(), 0, false);
         
     }
@@ -102,8 +103,9 @@ public class TAplikacjaTest {
     public void testZamkniecieWypozyczenia() {
         System.out.println("zamkniecieWypozyczenia");
         TAplikacja instance = new TAplikacja();
-        instance.zamkniecieWypozyczenia();
-        // TODO review the generated test code and remove the default call to fail.
+        
+        instance.zamkniecieWypozyczenia(System.currentTimeMillis());
+
         fail("The test case is a prototype.");
     }
 
@@ -114,8 +116,11 @@ public class TAplikacjaTest {
     public void testDodanieNowejKategorii() {
         System.out.println("dodanieNowejKategorii");
         TAplikacja instance = new TAplikacja();
-        instance.dodanieNowejKategorii();
-        // TODO review the generated test code and remove the default call to fail.
+        
+        instance.dodanieNowejKategorii("Zimowe");
+        Kategoria kategoria = BazaKategorii.szukaj("Zimowe");
+        assertEquals(kategoria.getNazwa(), "Zimowe");
+        
         fail("The test case is a prototype.");
     }
     
