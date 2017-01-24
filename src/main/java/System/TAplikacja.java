@@ -15,7 +15,14 @@ public class TAplikacja {
      */
     public static void main(String[] args) {
 
-        System.err.println("");
+        System.err.print(
+            "Menu\n" +
+            "1.Dodaj nowy sprzęt\n" +
+            "2.Dodaj nowe wypozyczenie.\n" +
+            "3.Zamkniecie wypozyczenia\n" +
+            "4.Dodaj nowa kategorie"
+        );
+        
 
     }
 
