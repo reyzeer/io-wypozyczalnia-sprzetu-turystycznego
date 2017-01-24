@@ -29,7 +29,7 @@ public class BazaWypozyczen {
      * 
      * @param dane
      */
-    static public Wypozyczenie szukaj(String[] dane) {
+    static public Wypozyczenie szukaj(Wypozyczenie wypozyczenie) {
             // TODO - implement BazaWypozyczen.szukaj
             throw new UnsupportedOperationException();
     }

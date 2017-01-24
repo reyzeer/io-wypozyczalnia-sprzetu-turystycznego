@@ -6,6 +6,7 @@ import System.Katalog.Sprzet;
 import System.ObslugaKlienta.Klienci.Klient;
 import System.ObslugaKlienta.Wypozyczenia.BazaWypozyczen;
 import System.ObslugaKlienta.Wypozyczenia.Wypozyczenie;
+import java.util.List;
 
 public class TAplikacja {
 
@@ -39,7 +40,7 @@ public class TAplikacja {
 
     public void dodanieNowegoWypozyczenia(
             Klient klient,
-            Sprzet[] sprzet,
+            List<Sprzet> sprzet,
             int dataRozpoczeciaWypozyczenia,
             int dataZakonczeniaWypozyczenia,
             boolean zakoczone) {

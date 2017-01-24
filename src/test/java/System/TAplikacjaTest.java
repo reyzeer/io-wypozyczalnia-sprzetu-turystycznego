@@ -6,16 +6,25 @@
 package System;
 
 import System.Katalog.BazaSprzetu;
+import System.Katalog.Kategoria.BazaKategorii;
 import System.Katalog.Kategoria.Kategoria;
 import System.Katalog.Sprzet;
 import System.ObslugaKlienta.Klienci.Klient;
+import System.ObslugaKlienta.Wypozyczenia.BazaWypozyczen;
+import System.ObslugaKlienta.Wypozyczenia.Wypozyczenie;
+import java.util.ArrayList;
+import java.util.List;
+import mockit.Mocked;
+import mockit.integration.junit4.JMockit;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Rule;
 import org.junit.experimental.categories.Category;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 
 /**
@@ -73,11 +82,25 @@ public class TAplikacjaTest {
         TAplikacja instance = new TAplikacja();
 
         Kategoria kategoria = new Kategoria();
+        kategoria.setNazwa("Sporty zimowe");
 
         instance.dodanieNowegoSprzetu("Narty", 5, 7*24*60*60, 20000, kategoria, 28*24*60*60);
-        Sprzet sprzet = BazaSprzetu.szukaj("Narty");
+        
+        Sprzet modelDoWyszukiwania = new Sprzet();
+        modelDoWyszukiwania.setNazwa("Narty");
+        modelDoWyszukiwania.setIlosc(5);
+        modelDoWyszukiwania.setCenaZaOkres(20000);
+        modelDoWyszukiwania.setCenaZaOkres(7*24*60*60);
+        modelDoWyszukiwania.setKategoria(kategoria);
+        modelDoWyszukiwania.setMaksymalnyCzasWypozyczenia(28*24*60*60);
+        
+        Sprzet sprzet = BazaSprzetu.szukaj(modelDoWyszukiwania);
         
         assertEquals(sprzet.getNazwa(), "Narty");
+        assertEquals(sprzet.getIlosc(), 5);
+        assertEquals(sprzet.getKategoria(), kategoria);
+        assertEquals(sprzet.getDlugoscOkresu(), 7*24*60*60);
+        
     }
 
     /**
@@ -90,9 +113,28 @@ public class TAplikacjaTest {
         TAplikacja instance = new TAplikacja();
         
         Klient klient = new Klient();
-        Sprzet sprzet = new Sprzet();
-         
-        instance.dodanieNowegoWypozyczenia(klient, sprzet, System.currentTimeMillis(), 0, false);
+        
+        List<Sprzet> listaSprzetu = new ArrayList<Sprzet>();
+       
+        Sprzet modelDoWyszkiwania = new Sprzet();
+        modelDoWyszkiwania.setNazwa("Narty");
+        
+        Sprzet sprzetPierwszy = BazaSprzetu.szukaj(modelDoWyszkiwania);
+        
+        listaSprzetu.add(sprzetPierwszy);
+        
+        int rozpoczecieZamowienia = (int) System.currentTimeMillis();
+        
+        instance.dodanieNowegoWypozyczenia(klient, listaSprzetu, rozpoczecieZamowienia, 0, false);
+        
+        Wypozyczenie modelDoWyszukania = new Wypozyczenie();
+        modelDoWyszukania.setKlient(klient);
+        modelDoWyszukania.setSprzet(listaSprzetu);
+        modelDoWyszukania.setDataRozpoczeciaWypozyczenia(rozpoczecieZamowienia);
+        
+        assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getKlient(), klient);
+        assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getDataRozpoczeciaWypozyczenia(), rozpoczecieZamowienia);
+        assertEquals(BazaWypozyczen.szukaj(modelDoWyszukania).getSprzet(), listaSprzetu);
         
     }
 

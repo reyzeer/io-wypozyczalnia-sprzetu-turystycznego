@@ -2,11 +2,12 @@ package System.ObslugaKlienta.Wypozyczenia;
 
 import System.ObslugaKlienta.Klienci.*;
 import System.Katalog.*;
+import java.util.List;
 
 public class Wypozyczenie {
 
     private Klient klient;
-    private Sprzet[] sprzet;
+    private List<Sprzet> sprzet;
     private int dataRozpoczeciaWypozyczenia;
     private int dataZakonczeniaWypozyczenia;
     private boolean zakoczone;
@@ -58,7 +59,7 @@ public class Wypozyczenie {
         this.klient = klient;
     }
 
-    public Sprzet[] getSprzet() {
+    public List<Sprzet> getSprzet() {
         return this.sprzet;
     }
 
@@ -66,7 +67,7 @@ public class Wypozyczenie {
      * 
      * @param sprzet
      */
-    public void setSprzet(Sprzet[] sprzet) {
+    public void setSprzet(List<Sprzet> sprzet) {
         this.sprzet = sprzet;
     }
 

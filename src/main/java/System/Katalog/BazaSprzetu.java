@@ -33,7 +33,7 @@ public class BazaSprzetu {
         throw new UnsupportedOperationException();
     }
 
-    public static Sprzet szukaj(String narty) {
+    public static Sprzet szukaj(Sprzet sprzet) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
