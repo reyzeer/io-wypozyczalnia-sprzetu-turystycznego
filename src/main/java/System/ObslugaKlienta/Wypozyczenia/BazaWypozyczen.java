@@ -11,7 +11,7 @@ public class BazaWypozyczen {
      * 
      * @param model
      */
-    public boolean dodaj(Wypozyczenie model) {
+    static public boolean dodaj(Wypozyczenie model) {
             // TODO - implement BazaWypozyczen.dodaj
             throw new UnsupportedOperationException();
     }
@@ -20,7 +20,7 @@ public class BazaWypozyczen {
      * 
      * @param model
      */
-    public boolean usun(Wypozyczenie model) {
+    static public boolean usun(Wypozyczenie model) {
             // TODO - implement BazaWypozyczen.usun
             throw new UnsupportedOperationException();
     }
@@ -29,7 +29,7 @@ public class BazaWypozyczen {
      * 
      * @param dane
      */
-    public Wypozyczenie szukaj(String[] dane) {
+    static public Wypozyczenie szukaj(String[] dane) {
             // TODO - implement BazaWypozyczen.szukaj
             throw new UnsupportedOperationException();
     }
@@ -38,7 +38,7 @@ public class BazaWypozyczen {
      * 
      * @param model
      */
-    public boolean edytuj(Wypozyczenie model) {
+    static public boolean edytuj(Wypozyczenie model) {
             // TODO - implement BazaWypozyczen.edytuj
             throw new UnsupportedOperationException();
     }

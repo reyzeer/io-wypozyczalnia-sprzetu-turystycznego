@@ -5,23 +5,33 @@
  */
 package System;
 
+import System.Katalog.BazaSprzetu;
 import System.Katalog.Kategoria.Kategoria;
 import System.Katalog.Sprzet;
+import System.ObslugaKlienta.Klienci.Klient;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
 
 /**
  *
  * @author reyzeer
  */
+@Category({Test_Control.class, Test_Entity.class})
+@RunWith(JMockit.class)
 public class TAplikacjaTest {
     
     public TAplikacjaTest() {
     }
+    
+    @Rule
+    public ExpectedException exception = ExpectedException.none(); //definicja obiektu odpowiedzialnego
+     //za zachowanie metody testującej podczas generowania wyjątku przez testowaną metodę
     
     @BeforeClass
     public static void setUpClass() {
@@ -33,12 +43,16 @@ public class TAplikacjaTest {
     
     @Before
     public void setUp() {
+        //Dane
     }
     
     @After
     public void tearDown() {
     }
 
+    @Mocked
+    Klient klientAndrzej;
+    
     /**
      * Test of main method, of class TAplikacja.
      */
@@ -47,8 +61,6 @@ public class TAplikacjaTest {
         System.out.println("main");
         String[] args = null;
         TAplikacja.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -56,14 +68,13 @@ public class TAplikacjaTest {
      */
     @Test
     public void testDodanieNowegoSprzetu() {
-        
+
         System.out.println("dodanieNowegoSprzetu");
         TAplikacja instance = new TAplikacja();
-        
+
         Kategoria kategoria = new Kategoria();
-        
+
         instance.dodanieNowegoSprzetu("Narty", 5, 7*24*60*60, 20000, kategoria, 28*24*60*60);
-        
         Sprzet sprzet = BazaSprzetu.szukaj("Narty");
         
         assertEquals(sprzet.getNazwa(), "Narty");
@@ -74,11 +85,14 @@ public class TAplikacjaTest {
      */
     @Test
     public void testDodanieNowegoWypozyczenia() {
+        
         System.out.println("dodanieNowegoWypozyczenia");
+
         TAplikacja instance = new TAplikacja();
-        instance.dodanieNowegoWypozyczenia();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Klient klient = new Klient();
+        Sprzet sprzet = new Sprzet();
+        instance.dodanieNowegoWypozyczenia(klient, sprzet, System.currentTimeMillis(), 0, false);
+        
     }
 
     /**

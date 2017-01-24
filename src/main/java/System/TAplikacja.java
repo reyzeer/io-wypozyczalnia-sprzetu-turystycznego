@@ -13,10 +13,7 @@ public class TAplikacja {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
         System.err.println("Hello world");
-        
-        // TODO code application logic here
     }
 
     public void dodanieNowegoSprzetu(
@@ -57,29 +54,21 @@ public class TAplikacja {
     
     }
 
-    public void zamkniecieWypozyczenia(
-            int dataZakonczeniaWypozyczenia,
-            boolean zakoczone) {
+    public void zamkniecieWypozyczenia(int dataZakonczeniaWypozyczenia) {
         
         Wypozyczenie wypozyczenie = new Wypozyczenie();
         
         wypozyczenie.setDataZakonczeniaWypozyczenia(dataZakonczeniaWypozyczenia);
-        wypozyczenie.setZakonczone(zakoczone);
+        wypozyczenie.setZakonczone(true);
         
-        BazaWypozyczen.usun(wypozyczenie)
-        // TODO - implement TAplikacja.zamkniecieWypozyczenia
-        throw new UnsupportedOperationException();
+        BazaWypozyczen.usun(wypozyczenie);
     }
 
-    public void dodanieNowejKategorii(
-            String name) {
+    public void dodanieNowejKategorii(String name) {
         
-        Kategoria kategoria = new Kategoria ();
+        Kategoria kategoria = new Kategoria();
+        kategoria.setNazwa(name);
         
-        kategoria.setNazwa();
-        
-        // TODO - implement TAplikacja.dodanieNowejKategorii
-        throw new UnsupportedOperationException();
     }
 
 }

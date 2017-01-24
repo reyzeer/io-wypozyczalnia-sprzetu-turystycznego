@@ -20,17 +20,8 @@ public class BazaSprzetu {
      * @param model
      */
     static public boolean usun(Sprzet model) {
-            // TODO - implement BazaSprzetu.usun
-            throw new UnsupportedOperationException();
-    }
-
-    /**
-     * 
-     * @param dane
-     */
-    static public Sprzet szukaj(String[] dane) {
-            // TODO - implement BazaSprzetu.szukaj
-            throw new UnsupportedOperationException();
+        // TODO - implement BazaSprzetu.usun
+        throw new UnsupportedOperationException();
     }
 
     /**
@@ -38,8 +29,12 @@ public class BazaSprzetu {
      * @param model
      */
     static public boolean edytuj(Sprzet model) {
-            // TODO - implement BazaSprzetu.edytuj
-            throw new UnsupportedOperationException();
+        // TODO - implement BazaSprzetu.edytuj
+        throw new UnsupportedOperationException();
+    }
+
+    public static Sprzet szukaj(String narty) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
