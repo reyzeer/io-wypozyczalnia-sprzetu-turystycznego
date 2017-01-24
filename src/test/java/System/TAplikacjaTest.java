@@ -184,10 +184,13 @@ public class TAplikacjaTest {
         TAplikacja instance = new TAplikacja();
         
         instance.dodanieNowejKategorii("Zimowe");
-        Kategoria kategoria = BazaKategorii.szukaj("Zimowe");
+        
+        Kategoria modelDoWyszukiwania = new Kategoria();
+        modelDoWyszukiwania.setNazwa("Zimowe");
+       
+        Kategoria kategoria = BazaKategorii.szukaj(modelDoWyszukiwania);
 
         assertEquals(kategoria.getNazwa(), "Zimowe");
-
     }
     
 }

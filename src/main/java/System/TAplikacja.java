@@ -14,7 +14,9 @@ public class TAplikacja {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.err.println("Hello world");
+
+        System.err.println("");
+
     }
 
     public void dodanieNowegoSprzetu(
