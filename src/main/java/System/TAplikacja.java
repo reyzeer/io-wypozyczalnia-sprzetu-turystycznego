@@ -1,6 +1,7 @@
 package System;
 
 import System.Katalog.BazaSprzetu;
+import System.Katalog.Kategoria.BazaKategorii;
 import System.Katalog.Kategoria.Kategoria;
 import System.Katalog.Sprzet;
 import System.ObslugaKlienta.Klienci.Klient;
@@ -46,7 +47,16 @@ public class TAplikacja {
         BazaSprzetu.dodaj(sprzet);
         
     }
+    
+    public int liczbaSprzetuWBazie() {
+        return BazaSprzetu.liczbaSprzetu();
+        
+    }
 
+    public int liczbaKategoriiWBazie() {
+        return BazaKategorii.liczbaKategorii();
+    }
+    
     public void dodanieNowegoWypozyczenia(
             Klient klient,
             List<Sprzet> sprzet,

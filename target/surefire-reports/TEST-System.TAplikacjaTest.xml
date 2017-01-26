@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="System.TAplikacjaTest" time="0.55" errors="4" skipped="0">
+<testsuite tests="5" failures="0" name="System.TAplikacjaTest" time="0.568" errors="4" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/reyzeer/netbeans-8.1/java/maven-nblib/netbeans-eventspy.jar test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/reyzeer/netbeans-8.1/java/maven-nblib/netbeans-eventspy.jar clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pl"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -59,8 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="System.TAplikacjaTest" name="testMain" time="0.034"/>
-  <testcase classname="System.TAplikacjaTest" name="testDodanieNowegoSprzetu" time="0.012">
+  <testcase classname="System.TAplikacjaTest" name="testMain" time="0.025"/>
+  <testcase classname="System.TAplikacjaTest" name="testDodanieNowegoSprzetu" time="0.011">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not supported yet.
 	at System.Katalog.BazaSprzetu.szukaj(BazaSprzetu.java:37)
 	at System.TAplikacjaTest.testDodanieNowegoSprzetu(TAplikacjaTest.java:97)
@@ -104,9 +104,9 @@
     <system-out>zamkniecieWypozyczenia
 </system-out>
   </testcase>
-  <testcase classname="System.TAplikacjaTest" name="testDodanieNowejKategorii" time="0">
+  <testcase classname="System.TAplikacjaTest" name="testDodanieNowejKategorii" time="0.003">
     <error type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
-	at System.Katalog.Kategoria.BazaKategorii.szukaj(BazaKategorii.java:34)
+	at System.Katalog.Kategoria.BazaKategorii.szukaj(BazaKategorii.java:38)
 	at System.TAplikacjaTest.testDodanieNowejKategorii(TAplikacjaTest.java:191)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.lang.reflect.Method.invoke(Method.java:498)
@@ -126,7 +126,7 @@
     <system-out>dodanieNowejKategorii
 </system-out>
   </testcase>
-  <testcase classname="System.TAplikacjaTest" name="testDodanieNowegoWypozyczenia" time="0.001">
+  <testcase classname="System.TAplikacjaTest" name="testDodanieNowegoWypozyczenia" time="0.002">
     <error message="Not supported yet." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not supported yet.
 	at System.Katalog.BazaSprzetu.szukaj(BazaSprzetu.java:37)
 	at System.TAplikacjaTest.testDodanieNowegoWypozyczenia(TAplikacjaTest.java:122)

@@ -26,5 +26,12 @@
             <version>1.8</version>
         </dependency>
         
+        <!-- https://mvnrepository.com/artifact/org.fitnesse/fitlibrary -->
+        <dependency>
+            <groupId>org.fitnesse</groupId>
+            <artifactId>fitlibrary</artifactId>
+            <version>20080812</version>
+        </dependency>
+        
     </dependencies>
 </project>

@@ -37,4 +37,8 @@ public class BazaSprzetu {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    public static int liczbaSprzetu() {
+        return sprzet.size();
+    }
+    
 }

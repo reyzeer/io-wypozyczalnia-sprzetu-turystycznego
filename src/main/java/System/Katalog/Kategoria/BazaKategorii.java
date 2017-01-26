@@ -7,6 +7,10 @@ public class BazaKategorii {
 
     static private ArrayList<Kategoria> kategorie = new ArrayList<Kategoria>();
 
+    static public int liczbaKategorii() {
+        return kategorie.size();
+    }
+    
     /**
      *
      * @param model
