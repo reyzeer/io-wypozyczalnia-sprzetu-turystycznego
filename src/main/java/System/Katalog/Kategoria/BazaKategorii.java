@@ -16,8 +16,8 @@ public class BazaKategorii {
      * @param model
      */
     static public boolean dodaj(Kategoria model) {
-        // TODO - implement BazaKategorii.dodaj
-        throw new UnsupportedOperationException();
+        boolean result = kategorie.add(model);
+        return result;
     }
 
     /**
@@ -34,8 +34,12 @@ public class BazaKategorii {
      * @param dane
      */
     static public Kategoria szukaj(Kategoria kategoria) {
-        // TODO - implement BazaKategorii.szukaj
-        throw new UnsupportedOperationException();
+        for (Kategoria temp : kategorie) {
+            if (temp.getNazwa() == kategoria.getNazwa()) {
+                return temp;
+            }
+        }
+        return null;
     }
 
     /**

@@ -27,8 +27,9 @@ public class DodanieNowegoSprzetuTest extends ColumnFixture {
         int liczbaSprzetu = pobierzLiczbeSprzetuZAplikacji();
         
         try {
-    
+            
             String nazwa = dane[0];
+            
             int ilosc = Integer.parseInt(dane[1]);
             int dlugoscOkresu = Integer.parseInt(dane[2]);
             int cenaZaOkres = Integer.parseInt(dane[3]);
@@ -38,6 +39,7 @@ public class DodanieNowegoSprzetuTest extends ColumnFixture {
             kategoria.setNazwa(dane[4]);
             
             int maksymalnyCzasWypozyczenia = Integer.parseInt(dane[5]);
+            
             
             SetUp.aplikacja.dodanieNowegoSprzetu(nazwa, ilosc, dlugoscOkresu, cenaZaOkres, kategoria, maksymalnyCzasWypozyczenia);
             

@@ -113,6 +113,16 @@ public class TAplikacja {
 
     public void dodanieNowejKategorii(String name) {
         
+        if (name == null || name.isEmpty()) {
+            return;
+        }
+        
+        Kategoria modelDoWyszukiwania = new Kategoria();
+        modelDoWyszukiwania.setNazwa(name);
+        if (BazaKategorii.szukaj(modelDoWyszukiwania) instanceof Kategoria) {
+            return;
+        }
+        
         Kategoria kategoria = new Kategoria();
         kategoria.setNazwa(name);
         
