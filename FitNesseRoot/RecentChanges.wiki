@@ -1,0 +1,9 @@
+|WypozyczalniaSprzetu.SetUp.Dodawanie_sprzetu||15:43:08 Wt, sty 31, 2017|
+|WypozyczalniaSprzetu.SetUp||15:42:31 Wt, sty 31, 2017|
+|WypozyczalniaSprzetu.SetUp.Dodawanie_kategorii||15:35:09 Wt, sty 31, 2017|
+|WypozyczalniaSprzetu.SetUp.dodanieNowejKategorii||15:02:02 Wt, sty 31, 2017|
+|WypozyczalniaSprzetu||20:17:17 Wt, sty 24, 2017|
+|FrontPage.WypozyczalniaSprzetu||19:43:32 Wt, sty 24, 2017|
+|FrontPage.SetUp||19:39:52 Wt, sty 24, 2017|
+|FrontPage.Wypozyczenia||19:37:48 Wt, sty 24, 2017|
+|FrontPage.Dodaj_nowy_sprzet||19:29:46 Wt, sty 24, 2017|

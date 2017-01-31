@@ -1,0 +1,10 @@
+---
+Test
+---
+!|fitnesse_fixture.DodajKategorie|
+|dane|dodajKategorie?|pobierzLiczbeKategoriiZAplikacji?|
+|SprzetZimowy|true|1|
+|blank|false|1|
+|Football|true|2|
+|Football|false|2|
+|SprzetWodny|true|3|

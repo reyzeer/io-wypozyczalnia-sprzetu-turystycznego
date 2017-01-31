@@ -1,0 +1,13 @@
+---
+Test
+---
+!|fitnesse_fixture.DodanieNowegoSprzetuTest|
+|dane|dodajSprzet?|pobierzLiczbeSprzetuZAplikacji?|
+|Narty,10,10000,1000,SprzetZimowy,1000000|true|1|
+|Sanki,10,10000,1000,SprzetZimowy,1000000|true|2|
+|Lyzwy,10,10000,1000,SprzetZimowy,1000000|true|3|
+|Pilka,0,0,1000,Football,1000000|false|3|
+|Korki,10,0,1000,Football,1000000|false|3|
+|Snowboard,10,10000,0,SprzetZimowy,1000000|false|3|
+|'',10,0,1000,Wodny,1000000|false|3|
+|Kajak,10,10000,1000,Wodny,1000000|true|4|
