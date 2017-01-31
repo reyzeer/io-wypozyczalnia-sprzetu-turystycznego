@@ -40,7 +40,6 @@ public class DodanieNowegoSprzetuTest extends ColumnFixture {
             
             int maksymalnyCzasWypozyczenia = Integer.parseInt(dane[5]);
             
-            
             SetUp.aplikacja.dodanieNowegoSprzetu(nazwa, ilosc, dlugoscOkresu, cenaZaOkres, kategoria, maksymalnyCzasWypozyczenia);
             
             if (liczbaSprzetu != pobierzLiczbeSprzetuZAplikacji()) {

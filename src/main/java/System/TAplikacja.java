@@ -119,12 +119,14 @@ public class TAplikacja {
         
         Kategoria modelDoWyszukiwania = new Kategoria();
         modelDoWyszukiwania.setNazwa(name);
-        if (BazaKategorii.szukaj(modelDoWyszukiwania) instanceof Kategoria) {
+        if (BazaKategorii.szukaj(modelDoWyszukiwania) != null) {
             return;
         }
         
         Kategoria kategoria = new Kategoria();
         kategoria.setNazwa(name);
+        
+        BazaKategorii.dodaj(kategoria);
         
     }
 
