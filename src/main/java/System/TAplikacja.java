@@ -32,8 +32,34 @@ public class TAplikacja {
             int ilosc,
             int dlugoscOkresu,
             int cenaZaOkres, 
-            Kategoria katgoria,
+            Kategoria kategoria,
             int maksymalnyCzasWypozyczenia) {
+        
+        /** --- Validacja --- */
+        if (name == null || name.isEmpty()) {
+            return;
+        }
+        
+        if (ilosc < 0) {
+            return;
+        }
+        
+        if (dlugoscOkresu < 1*60*60) {
+            return;
+        }
+        
+        if (cenaZaOkres < 1) {
+            return;
+        }
+        
+        if (kategoria == null) {
+            return;
+        }
+        
+        if (maksymalnyCzasWypozyczenia < dlugoscOkresu) {
+            return;
+        }
+        /** --- Validacja --- */
         
         Sprzet sprzet = new Sprzet(); 
        
@@ -41,7 +67,7 @@ public class TAplikacja {
         sprzet.setIlosc(ilosc);
         sprzet.setDlugoscOkresu(dlugoscOkresu);
         sprzet.setCenaZaOkres(cenaZaOkres);
-        sprzet.setKategoria(katgoria);
+        sprzet.setKategoria(kategoria);
         sprzet.setMaksymalnyCzasWypozyczenia(maksymalnyCzasWypozyczenia);
         
         BazaSprzetu.dodaj(sprzet);

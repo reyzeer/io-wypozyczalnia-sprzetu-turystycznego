@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: System.TAplikacjaTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.568 sec <<< FAILURE!
-testDodanieNowegoSprzetu(System.TAplikacjaTest)  Time elapsed: 0.011 sec  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.539 sec <<< FAILURE!
+testDodanieNowegoSprzetu(System.TAplikacjaTest)  Time elapsed: 0.009 sec  <<< ERROR!
 java.lang.UnsupportedOperationException: Not supported yet.
 	at System.Katalog.BazaSprzetu.szukaj(BazaSprzetu.java:37)
 	at System.TAplikacjaTest.testDodanieNowegoSprzetu(TAplikacjaTest.java:97)
@@ -20,7 +20,7 @@ java.lang.UnsupportedOperationException: Not supported yet.
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-testZamkniecieWypozyczenia(System.TAplikacjaTest)  Time elapsed: 0.002 sec  <<< ERROR!
+testZamkniecieWypozyczenia(System.TAplikacjaTest)  Time elapsed: 0.005 sec  <<< ERROR!
 java.lang.UnsupportedOperationException: Not supported yet.
 	at System.Katalog.BazaSprzetu.szukaj(BazaSprzetu.java:37)
 	at System.TAplikacjaTest.testZamkniecieWypozyczenia(TAplikacjaTest.java:157)
@@ -38,7 +38,7 @@ java.lang.UnsupportedOperationException: Not supported yet.
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-testDodanieNowejKategorii(System.TAplikacjaTest)  Time elapsed: 0.003 sec  <<< ERROR!
+testDodanieNowejKategorii(System.TAplikacjaTest)  Time elapsed: 0.002 sec  <<< ERROR!
 java.lang.UnsupportedOperationException
 	at System.Katalog.Kategoria.BazaKategorii.szukaj(BazaKategorii.java:38)
 	at System.TAplikacjaTest.testDodanieNowejKategorii(TAplikacjaTest.java:191)
